@@ -2,9 +2,12 @@
 class StarTech{
 public:
   virtual void phone()=0;
-  // virtual void laptop()=0;
+  virtual void laptop()=0;
 };
 class Nokia:public StarTech{
+  void laptop(){
+
+  };
   void phone(){
    camera();
    features();
@@ -12,6 +15,7 @@ class Nokia:public StarTech{
    height_weight();
    manufacture_Country();
   }
+
   void camera(){
     std::cout << "64MP" << '\n';
     std::cout << "Night mode" << '\n';
@@ -37,13 +41,15 @@ class Nokia:public StarTech{
   }
 };
 class Iphone:public StarTech{
+  void laptop(){
+
+  };
   void phone(){
    camera();
    features();
    display();
    height_weight();
    manufacture_Country();
-
   }
   void camera(){
     std::cout << "Ai lens" << '\n';
@@ -73,14 +79,17 @@ class Iphone:public StarTech{
   }
 };
 class Asus:public StarTech{
+  void phone(){
+
+  }
   void laptop(){
    camera();
    features();
    display();
    height_weight();
    manufacture_Country();
-
   }
+
   void camera(){
     std::cout << "1080 hd" << '\n';
     std::cout << "Night mode" << '\n';
@@ -114,7 +123,7 @@ int main(){
   Iphone i;
   st=&i;
   st->phone();
-  // Asus as;
-  // st=&as;
-  // st->laptop();
+   Asus as;
+   st=&as;
+   st->laptop();
 }
